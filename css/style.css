@@ -1,0 +1,76 @@
+.one{
+    height: 200px;
+    width: 300px;
+    background:gray;
+    transition: 3s;
+    margin: auto;
+    transform: skewY(30deg);
+    float: left;
+    padding: 50px;
+}
+.two{
+    height: 200px;
+    width: 300px;
+    background:gray;
+    transition: 3s;
+    margin: 30px;
+    transform: skewY(-30deg);
+    float: left;
+    padding: 50px;
+}
+.one:hover{
+    /* transform: scale(1.1); */
+    /* transform: rotate(180deg); */
+    /* transform: rotate3d(1, 1, 1, -360deg); */
+}
+.three{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(64, 6, 6);
+    transition: width 1s, height 2s, transform 1s;
+}
+.three:hover{
+    height: 300px;
+    width: 300px;
+    transform: rotate(180deg);
+}
+.three::before{
+    content: 'transition: width 1s, height 2s, transform 1s;';
+}
+/* .three::after{
+    content: 'transition: width 1s, height 2s, transform 1s;';
+} */
+
+p::before{
+    content: 'Afrin ';
+}
+p::after{
+    content: 'Mostofa';
+}
+
+.four{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    /* animation-direction: reverse; */
+}
+
+@keyframes example{
+    0%{
+        width: 100px;
+        background-color: red;
+        left: 0; 
+        top: 10px;
+        height: 500px;
+    }
+    25%{width: 300px;background-color: cadetblue;left: 0px; top: 10px;}
+    50%{width: 400px;background-color: rgb(1, 12, 13);left: 0px; top: 50px;}
+    75%{width: 600px;background-color: rgb(25, 38, 38);left: 0px; top: -100px;}
+    100%{width: 900px;background-color: rgb(25, 38, 38);left: 0px; top: -100px; border-radius: 50%;}
+
+}
